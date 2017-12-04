@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main()
+{	
+	float p_valor = 0, nv_sig = 0;
+	int i = 0;
+	
+	while(i < 10)
+	{
+		printf("Digite o P-Valor..: ");
+		scanf("%f", &p_valor);	
+		printf("Digite o nivel de significancia..: ");
+		scanf("%f", &nv_sig);	
+		
+		if(p_valor > nv_sig)
+		{
+			printf("\nO P-Valor \202 maior que o nivel de significancia!!\tNAO REJEITA H0\n");
+		}
+		
+		if(p_valor < nv_sig)
+		{
+			printf("\nO P-Valor \202 menor que o nivel de significancia!!\tREJEITA H0\n");
+		}
+		
+		printf("\n------------------------------------------\n");
+		
+		i++;
+	}
+	
+	return 0;
+}
